@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view bindtap="bindViewTap" class="userinfo">
+    <image class="product" src="images/gangbing1.jpg"></image>
+    <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+  </scroll-view>
+  <rich-text bindtap="tap1" nodes="{{nodes}}" >
+    aaa
+  </rich-text>
+  <rich-text bindtap="tap2" nodes="{{nodes}}">
+    bbb
+  </rich-text>
+  <rich-text bindtap="tap3" nodes="{{nodes}}">
+    ccc
+  </rich-text>
+  <rich-text bindtap="tap4" nodes="{{nodes}}">
+    ddd
+  </rich-text>
+  <rich-text bindtap="tap5" nodes="{{nodes}}">
+    eee
+  </rich-text>
+</view>

@@ -1,0 +1,10 @@
+  <scroll-view bindtap="bindViewTap" class="userinfo">
+
+  姓名*<input placeholder="{{name}}" />
+  地址*<input placeholder="{{address}}" />
+  手机号*<input placeholder="{{phone}}" />
+  留言*<input placeholder="{{message}}" />
+<br /><br />
+  总金额 {{total}}
+    
+  </scroll-view>
