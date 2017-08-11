@@ -1,17 +1,22 @@
 <view class="container">
 
-  <span>
-    <view>
-      {{value}}
-    </view>
-  </span>
-
   <scroll-view class="userinfo">
     <image class="product" src="../images/gangbing1.jpg"></image>
     <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
   </scroll-view>
+
+  <rich-text bindtap="countMinus()">
+    数量-
+  </rich-text>
+
+  <rich-text bindtap="countAdd()">
+    数量+
+  </rich-text>
+
+数量：{{productCount}}
+
   <view class="buy">
-    <button bindtap="bindViewTap" type="primary">购买</button>
+    <button bindtap="bindViewTap" type="primary">购买（放在最下方）</button>
   </view>
 </view>
