@@ -6,11 +6,11 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
   </scroll-view>
 
-  <rich-text bindtap="countMinus()">
+  <rich-text bindtap="countMinus">
     数量-
   </rich-text>
 
-  <rich-text bindtap="countAdd()">
+  <rich-text bindtap="countAdd">
     数量+
   </rich-text>
 

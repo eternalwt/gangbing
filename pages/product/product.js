@@ -15,12 +15,23 @@ Page({
       url: '../userinfo/userinfo'
     })
   },
-  countMinus: function(productId) {
-    app.GlobalData.count[productId]--;
+  countMinus: function() {
+    //TODO 0的时候样式上要能看出不能点
+    if (app.globalData.count[productId] > 0)
+    {
+      app.GlobalData.count[productId]--;
+      console.log(app.globalData.count[productId]);
+    }
+    
   },
-  countAdd: function (productId) {
-    app.GlobalData.count[productId]++;
+  countAdd: function () {
+    app.globalData.count[0]++;
+    console.log(app.globalData.count[0]);
   },
+  // countAdd: function (productId) {
+  //   app.GlobalData.count[productId]++;
+  //   console.log(app.GlobalData.count[productId]);
+  // },
   onLoad: function (options) {
     console.log('onLoad_')
     var that = this
