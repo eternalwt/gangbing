@@ -5,6 +5,7 @@ Page({
   data: {
     productId: 0,
     productCount:0,
+    imagePath: "",
     motto: '点击图片购买',
     userInfo: {}
   },
@@ -17,27 +18,38 @@ Page({
   },
   countMinus: function() {
     //TODO 0的时候样式上要能看出不能点
-    if (app.globalData.count[productId] > 0)
+    //if (app.globalData.count[productId] > 0)
+    if (app.globalData.count[this.data.productId] > 0)
     {
-      app.GlobalData.count[productId]--;
-      console.log(app.globalData.count[productId]);
+      //app.GlobalData.count[productId]--;
+      app.globalData.count[this.data.productId]--;
+
+      console.log(app.globalData.count[0]);
+
+      var that = this
+      that.setData({
+        productCount: app.globalData.count[this.data.productId]
+      })
     }
-    
   },
   countAdd: function () {
-    app.globalData.count[0]++;
+    app.globalData.count[this.data.productId]++;
+
     console.log(app.globalData.count[0]);
+
+    var that = this
+    that.setData({
+      productCount: app.globalData.count[this.data.productId]
+    })
   },
-  // countAdd: function (productId) {
-  //   app.GlobalData.count[productId]++;
-  //   console.log(app.GlobalData.count[productId]);
-  // },
+
   onLoad: function (options) {
     console.log('onLoad_')
     var that = this
     that.setData({
       productId:options.id,
-      productCount: app.globalData.count[options.id]
+      productCount: app.globalData.count[options.id],
+      imagePath: "../images/" + options.id.toString() + ".png"
     })
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo) {
