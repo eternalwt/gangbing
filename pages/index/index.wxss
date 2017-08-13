@@ -27,5 +27,8 @@
 .thumbnail {
   width:256rpx;
   height:192rpx;
+}
+
+.row {
   display:flex;
 }

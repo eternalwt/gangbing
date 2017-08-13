@@ -6,40 +6,75 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
   </scroll-view>
 
-  <view bindtap="tap1">
+  <view class="row" bindtap="tap1">
     <image class="thumbnail" src="../images/0.png"></image>
-    <rich-text nodes="{{nodes}}" >
+    <rich-text class="thumbnail" nodes="{{nodes}}" >
       产品1
     </rich-text>
     单价：{{priceLst[0]}}
+    <rich-text bindtap="countMinus">
+      数量-
+    </rich-text>
+    <rich-text bindtap="countAdd">
+      数量+
+    </rich-text>
+    {{countLst[0]}}
   </view>
-  <view bindtap="tap2">
+  <view class="row" bindtap="tap2">
     <image class="thumbnail" src="../images/1.png"></image>
-    <rich-text nodes="{{nodes}}">
+    <rich-text class="thumbnail" nodes="{{nodes}}">
       产品2
     </rich-text>
     单价：{{priceLst[1]}}
+    <rich-text bindtap="countMinus">
+      数量-
+    </rich-text>
+    <rich-text bindtap="countAdd">
+      数量+
+    </rich-text>
+    {{countLst[1]}}
   </view>
-  <view bindtap="tap3">
+  <view class="row" bindtap="tap3">
     <image class="thumbnail" src="../images/2.png"></image>
-    <rich-text nodes="{{nodes}}">
+    <rich-text class="thumbnail" nodes="{{nodes}}">
       产品3
     </rich-text>
     单价：{{priceLst[2]}}
+    <rich-text bindtap="countMinus">
+      数量-
+    </rich-text>
+    <rich-text bindtap="countAdd">
+      数量+
+    </rich-text>
+    {{countLst[2]}}
   </view>
-  <view bindtap="tap4">
+  <view class="row" bindtap="tap4">
     <image class="thumbnail" src="../images/3.png"></image>
-    <rich-text nodes="{{nodes}}">
+    <rich-text class="thumbnail" nodes="{{nodes}}">
       产品4
     </rich-text>
     单价：{{priceLst[3]}}
+    <rich-text bindtap="countMinus">
+      数量-
+    </rich-text>
+    <rich-text bindtap="countAdd">
+      数量+
+    </rich-text>
+    {{countLst[3]}}
   </view>
-  <view bindtap="tap5">
+  <view class="row" bindtap="tap5">
     <image class="thumbnail" src="../images/4.png"></image>
-    <rich-text nodes="{{nodes}}">
+    <rich-text class="thumbnail" nodes="{{nodes}}">
       产品5
     </rich-text>
     单价：{{priceLst[4]}}
+    <rich-text bindtap="countMinus">
+      数量-
+    </rich-text>
+    <rich-text bindtap="countAdd">
+      数量+
+    </rich-text>
+    {{countLst[4]}}
   </view>
 
 </view>

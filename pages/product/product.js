@@ -17,14 +17,9 @@ Page({
     })
   },
   countMinus: function() {
-    //TODO 0的时候样式上要能看出不能点
-    //if (app.globalData.count[productId] > 0)
     if (app.globalData.count[this.data.productId] > 0)
     {
-      //app.GlobalData.count[productId]--;
       app.globalData.count[this.data.productId]--;
-
-      console.log(app.globalData.count[0]);
 
       var that = this
       that.setData({
@@ -34,8 +29,6 @@ Page({
   },
   countAdd: function () {
     app.globalData.count[this.data.productId]++;
-
-    console.log(app.globalData.count[0]);
 
     var that = this
     that.setData({

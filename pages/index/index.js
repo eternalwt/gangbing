@@ -4,6 +4,7 @@ var app = getApp()
 Page({
   data: {
     priceLst:[],
+
     motto: '点击图片购买',
     userInfo: {}
   },
@@ -43,13 +44,33 @@ Page({
       url: '../product/product?id=4'
     })
   },
+  countMinus: function () {
+    if (app.globalData.count[0] > 0) {
+      app.globalData.count[0]--;
+
+      var that = this
+      that.setData({
+        productCount: app.globalData.count[0]
+      })
+    }
+  },
+  countAdd: function (event) {
+    event.stopPropagation;
+    app.globalData.count[0]++;
+
+    var that = this
+    that.setData({
+      productCount: app.globalData.count[0]
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this
     //调用应用实例的方法获取全局数据
     
     that.setData({
-      priceLst: app.globalData.price
+      priceLst: app.globalData.price,
+      countLst:app.globalData.count
     })
     app.getUserInfo(function(userInfo){
       //更新数据
