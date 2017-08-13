@@ -23,3 +23,9 @@
 .buy {
   margin-top:20rpx;
 }
+
+.thumbnail {
+  width:256rpx;
+  height:192rpx;
+  display:flex;
+}

@@ -5,19 +5,41 @@
     <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
   </scroll-view>
-  <rich-text bindtap="tap1" nodes="{{nodes}}" >
-    aaa
-  </rich-text>
-  <rich-text bindtap="tap2" nodes="{{nodes}}">
-    bbb
-  </rich-text>
-  <rich-text bindtap="tap3" nodes="{{nodes}}">
-    ccc
-  </rich-text>
-  <rich-text bindtap="tap4" nodes="{{nodes}}">
-    ddd
-  </rich-text>
-  <rich-text bindtap="tap5" nodes="{{nodes}}">
-    eee
-  </rich-text>
+
+  <view bindtap="tap1">
+    <image class="thumbnail" src="../images/0.png"></image>
+    <rich-text nodes="{{nodes}}" >
+      产品1
+    </rich-text>
+    单价：{{priceLst[0]}}
+  </view>
+  <view bindtap="tap2">
+    <image class="thumbnail" src="../images/1.png"></image>
+    <rich-text nodes="{{nodes}}">
+      产品2
+    </rich-text>
+    单价：{{priceLst[1]}}
+  </view>
+  <view bindtap="tap3">
+    <image class="thumbnail" src="../images/2.png"></image>
+    <rich-text nodes="{{nodes}}">
+      产品3
+    </rich-text>
+    单价：{{priceLst[2]}}
+  </view>
+  <view bindtap="tap4">
+    <image class="thumbnail" src="../images/3.png"></image>
+    <rich-text nodes="{{nodes}}">
+      产品4
+    </rich-text>
+    单价：{{priceLst[3]}}
+  </view>
+  <view bindtap="tap5">
+    <image class="thumbnail" src="../images/4.png"></image>
+    <rich-text nodes="{{nodes}}">
+      产品5
+    </rich-text>
+    单价：{{priceLst[4]}}
+  </view>
+
 </view>
