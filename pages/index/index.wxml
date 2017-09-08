@@ -100,8 +100,8 @@
 </view>
 
 <view>
-总金额
-<text bindtap="goCharge">去结算</text>
+总金额{{total}}
+<text bindtap="goCharge">立即购买</text>
 </view>
 
 </view>

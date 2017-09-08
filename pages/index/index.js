@@ -4,9 +4,9 @@ var app = getApp()
 Page({
   data: {
     priceLst:[],
-
     motto: '点击图片购买',
     userInfo: {},
+    total: 0,
 
     carts: [
       { cid: 0, title: 'Zippo打火机', image: 'https://img12.360buyimg.com/n7/jfs/t2584/348/1423193442/572601/ae464607/573d5eb3N45589898.jpg', num: '1', price: '198.0', sum: '198.0', selected: true },
@@ -95,6 +95,7 @@ Page({
     console.log("showed!");
     var that = this
     that.setData({
+      total: app.globalData.totalPrice,
       countLst: app.globalData.count
     })
   }

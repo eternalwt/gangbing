@@ -4,7 +4,7 @@ var app = getApp()
 Page({
   data: {
     productId: 0,
-    productCount:0,
+    productCount: 0,
     imagePath: "",
     motto: '点击图片购买',
     userInfo: {}
@@ -20,6 +20,7 @@ Page({
     if (app.globalData.count[this.data.productId] > 0)
     {
       app.globalData.count[this.data.productId]--;
+      app.globalData.totalPrice -= app.globalData.price[this.data.productId];
 
       var that = this
       that.setData({
@@ -29,6 +30,7 @@ Page({
   },
   countAdd: function () {
     app.globalData.count[this.data.productId]++;
+    app.globalData.totalPrice += app.globalData.price[this.data.productId];
 
     var that = this
     that.setData({

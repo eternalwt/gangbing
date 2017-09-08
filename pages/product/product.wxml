@@ -15,8 +15,8 @@
   </rich-text>
 
 数量：{{productCount}}
-
+总金额：{{total}}
   <view class="buy">
-    <button bindtap="bindViewTap" type="primary">购买（放在最下方）</button>
+    <button bindtap="bindViewTap" type="primary">立即购买（放在最下方）</button>
   </view>
 </view>
