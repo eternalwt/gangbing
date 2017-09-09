@@ -31,12 +31,13 @@ Page({
   },
 
   countMinus: function (event) {
-    if (app.globalData.count[0] > 0) {
-      app.globalData.count[0]--;
+    var id = event.currentTarget.id;
+    if (app.globalData.count[id] > 0) {
+      app.globalData.count[id]--;
       
       var that = this
       that.setData({
-        productCount: app.globalData.count[0],
+        productCount: app.globalData.count[id],
         countLst : app.globalData.count
       })
       console.log(countLst);
@@ -46,11 +47,13 @@ Page({
   countAdd: function (event) {
     //event.stopPropagation;
     console.log(event);
-    app.globalData.count[0]++;
+    var id = event.currentTarget.id;
+    console.log(id);
+    app.globalData.count[id]++;
 
     var that = this
     that.setData({
-      productCount: app.globalData.count[0],
+      productCount: app.globalData.count[id],
       countLst: app.globalData.count
     })
   },

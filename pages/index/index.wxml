@@ -13,8 +13,8 @@
     </rich-text>
     单价：{{priceLst[0]}}
     <view>
-      <rich-text catchtap="countMinus"> - </rich-text>
-      <rich-text catchtap="countAdd"> + </rich-text>
+      <rich-text id="0" catchtap="countMinus"> - </rich-text>
+      <rich-text id="0" catchtap="countAdd"> + </rich-text>
       {{countLst[0]}}
     </view>
   </view>
@@ -25,8 +25,8 @@
     </rich-text>
     单价：{{priceLst[1]}}
     <view>
-      <rich-text catchtap="countMinus"> - </rich-text>
-      <rich-text catchtap="countAdd"> + </rich-text>
+      <rich-text id="1" catchtap="countMinus"> - </rich-text>
+      <rich-text id="1" catchtap="countAdd"> + </rich-text>
       {{countLst[1]}}
     </view>
   </view>
@@ -37,8 +37,8 @@
     </rich-text>
     单价：{{priceLst[2]}}
     <view>
-      <rich-text catchtap="countMinus"> - </rich-text>
-      <rich-text catchtap="countAdd"> + </rich-text>
+      <rich-text id="2" catchtap="countMinus"> - </rich-text>
+      <rich-text id="2" catchtap="countAdd"> + </rich-text>
       {{countLst[2]}}
     </view>
   </view>
@@ -49,8 +49,8 @@
     </rich-text>
     单价：{{priceLst[3]}}
     <view>
-      <rich-text catchtap="countMinus"> - </rich-text>
-      <rich-text catchtap="countAdd"> + </rich-text>
+      <rich-text id="3" catchtap="countMinus"> - </rich-text>
+      <rich-text id="3" catchtap="countAdd"> + </rich-text>
       {{countLst[3]}}
     </view>
   </view>
@@ -61,8 +61,8 @@
     </rich-text>
     单价：{{priceLst[4]}}
     <view>
-      <rich-text catchtap="countMinus"> - </rich-text>
-      <rich-text catchtap="countAdd"> + </rich-text>
+      <rich-text id="4" catchtap="countMinus"> - </rich-text>
+      <rich-text id="4" catchtap="countAdd"> + </rich-text>
       {{countLst[4]}}
     </view>
     
