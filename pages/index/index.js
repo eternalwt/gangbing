@@ -4,6 +4,7 @@ var app = getApp()
 Page({
   data: {
     priceLst:[],
+    countLst:[],
     motto: '点击图片购买',
     userInfo: {},
     total: 0,
@@ -52,25 +53,29 @@ Page({
       url: '../product/product?id=4'
     })
   },
-  
-  countMinus: function () {
+
+  countMinus: function (event) {
     if (app.globalData.count[0] > 0) {
       app.globalData.count[0]--;
-
+      
       var that = this
       that.setData({
-        productCount: app.globalData.count[0]
+        productCount: app.globalData.count[0],
+        countLst : app.globalData.count
       })
+      console.log(countLst);
     }
   },
 
   countAdd: function (event) {
-    event.stopPropagation;
+    //event.stopPropagation;
+    console.log(event);
     app.globalData.count[0]++;
 
     var that = this
     that.setData({
-      productCount: app.globalData.count[0]
+      productCount: app.globalData.count[0],
+      countLst: app.globalData.count
     })
   },
 
@@ -87,6 +92,7 @@ Page({
     
     that.setData({
       priceLst: app.globalData.price,
+      countLst: app.globalData.count
     })
     app.getUserInfo(function(userInfo){
       //更新数据
