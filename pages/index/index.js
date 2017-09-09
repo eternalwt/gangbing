@@ -52,6 +52,7 @@ Page({
       url: '../product/product?id=4'
     })
   },
+  
   countMinus: function () {
     if (app.globalData.count[0] > 0) {
       app.globalData.count[0]--;
@@ -62,6 +63,7 @@ Page({
       })
     }
   },
+
   countAdd: function (event) {
     event.stopPropagation;
     app.globalData.count[0]++;
@@ -71,11 +73,13 @@ Page({
       productCount: app.globalData.count[0]
     })
   },
+
   goCharge: function () {
     wx.navigateTo({
       url: '../userinfo/userinfo',
     })
   },
+
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -91,6 +95,7 @@ Page({
       })
     })
   },
+
   onShow: function () {
     console.log("showed!");
     var that = this
@@ -99,4 +104,5 @@ Page({
       countLst: app.globalData.count
     })
   }
+
 })

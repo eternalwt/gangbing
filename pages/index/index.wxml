@@ -12,13 +12,11 @@
       产品1
     </rich-text>
     单价：{{priceLst[0]}}
-    <rich-text bindtap="countMinus">
-      -
-    </rich-text>
-    <rich-text bindtap="countAdd">
-      +
-    </rich-text>
-    {{countLst[0]}}
+    <view>
+      <rich-text catchtap="countMinus"> - </rich-text>
+      <rich-text catchtap="countAdd"> + </rich-text>
+      {{countLst[0]}}
+    </view>
   </view>
   <view class="row" bindtap="tap2">
     <image class="thumbnail" src="../images/1.png"></image>
@@ -26,13 +24,11 @@
       产品2
     </rich-text>
     单价：{{priceLst[1]}}
-    <rich-text bindtap="countMinus">
-      -
-    </rich-text>
-    <rich-text bindtap="countAdd">
-      +
-    </rich-text>
-    {{countLst[1]}}
+    <view>
+      <rich-text catchtap="countMinus"> - </rich-text>
+      <rich-text catchtap="countAdd"> + </rich-text>
+      {{countLst[1]}}
+    </view>
   </view>
   <view class="row" bindtap="tap3">
     <image class="thumbnail" src="../images/2.png"></image>
@@ -40,13 +36,11 @@
       产品3
     </rich-text>
     单价：{{priceLst[2]}}
-    <rich-text bindtap="countMinus">
-      -
-    </rich-text>
-    <rich-text bindtap="countAdd">
-      +
-    </rich-text>
-    {{countLst[2]}}
+    <view>
+      <rich-text catchtap="countMinus"> - </rich-text>
+      <rich-text catchtap="countAdd"> + </rich-text>
+      {{countLst[2]}}
+    </view>
   </view>
   <view class="row" bindtap="tap4">
     <image class="thumbnail" src="../images/3.png"></image>
@@ -54,13 +48,11 @@
       产品4
     </rich-text>
     单价：{{priceLst[3]}}
-    <rich-text bindtap="countMinus">
-      -
-    </rich-text>
-    <rich-text bindtap="countAdd">
-      +
-    </rich-text>
-    {{countLst[3]}}
+    <view>
+      <rich-text catchtap="countMinus"> - </rich-text>
+      <rich-text catchtap="countAdd"> + </rich-text>
+      {{countLst[3]}}
+    </view>
   </view>
   <view class="row" bindtap="tap5">
     <image class="thumbnail" src="../images/4.png"></image>
@@ -68,13 +60,12 @@
       产品5
     </rich-text>
     单价：{{priceLst[4]}}
-    <rich-text bindtap="countMinus">
-      -
-    </rich-text>
-    <rich-text bindtap="countAdd">
-      +
-    </rich-text>
-    {{countLst[4]}}
+    <view>
+      <rich-text catchtap="countMinus"> - </rich-text>
+      <rich-text catchtap="countAdd"> + </rich-text>
+      {{countLst[4]}}
+    </view>
+    
   </view>
 
   <view class="container carts-list">
