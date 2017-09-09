@@ -6,7 +6,7 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
   </scroll-view>
 
-  <view class="row" bindtap="tap1">
+  <view class="row" id="0" bindtap="tap">
     <image class="thumbnail" src="../images/0.png"></image>
     <rich-text class="thumbnail" nodes="{{nodes}}" >
       产品1
@@ -18,7 +18,7 @@
       {{countLst[0]}}
     </view>
   </view>
-  <view class="row" bindtap="tap2">
+  <view class="row" id="1" bindtap="tap">
     <image class="thumbnail" src="../images/1.png"></image>
     <rich-text class="thumbnail" nodes="{{nodes}}">
       产品2
@@ -30,7 +30,7 @@
       {{countLst[1]}}
     </view>
   </view>
-  <view class="row" bindtap="tap3">
+  <view class="row" id="2" bindtap="tap">
     <image class="thumbnail" src="../images/2.png"></image>
     <rich-text class="thumbnail" nodes="{{nodes}}">
       产品3
@@ -42,7 +42,7 @@
       {{countLst[2]}}
     </view>
   </view>
-  <view class="row" bindtap="tap4">
+  <view class="row" id="3" bindtap="tap">
     <image class="thumbnail" src="../images/3.png"></image>
     <rich-text class="thumbnail" nodes="{{nodes}}">
       产品4
@@ -54,7 +54,7 @@
       {{countLst[3]}}
     </view>
   </view>
-  <view class="row" bindtap="tap5">
+  <view class="row" id="4" bindtap="tap">
     <image class="thumbnail" src="../images/4.png"></image>
     <rich-text class="thumbnail" nodes="{{nodes}}">
       产品5

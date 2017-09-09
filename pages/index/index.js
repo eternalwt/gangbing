@@ -23,34 +23,10 @@ Page({
       url: '../logs/logs'
     })
   },
-  tap1: function() {
-    console.log("bingTap");
+  tap: function(event) {
+    console.log(event);
     wx.navigateTo({
-      url: '../product/product?id=0'
-    })
-  },
-  tap2: function () {
-    console.log("bingTap");
-    wx.navigateTo({
-      url: '../product/product?id=1'
-    })
-  },
-  tap3: function () {
-    console.log("bingTap");
-    wx.navigateTo({
-      url: '../product/product?id=2'
-    })
-  },
-  tap4: function () {
-    console.log("bingTap");
-    wx.navigateTo({
-      url: '../product/product?id=3'
-    })
-  },
-  tap5: function () {
-    console.log("bingTap");
-    wx.navigateTo({
-      url: '../product/product?id=4'
+      url: '../product/product?id=' + event.currentTarget.id
     })
   },
 
