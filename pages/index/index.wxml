@@ -6,70 +6,21 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
   </scroll-view>
 
-  <view class="row" id="0" bindtap="tap">
-    <image class="thumbnail" src="../images/0.png"></image>
+  <view wx:for="{{products}}" wx:key="cid" class="row" id="{{item.cid}}" bindtap="tap">
+    <image class="thumbnail" src="{{item.image}}"></image>
     <rich-text class="thumbnail" nodes="{{nodes}}" >
-      产品1
+      {{item.name}}
     </rich-text>
-    单价：{{priceLst[0]}}
+    单价：{{item.price}}
     <view>
-      <rich-text id="0" catchtap="countMinus"> - </rich-text>
-      <rich-text id="0" catchtap="countAdd"> + </rich-text>
-      {{countLst[0]}}
+      <rich-text id="{{item.cid}}" catchtap="countMinus"> - </rich-text>
+      <rich-text id="{{item.cid}}" catchtap="countAdd"> + </rich-text>
+      {{item.count}}
     </view>
-  </view>
-  <view class="row" id="1" bindtap="tap">
-    <image class="thumbnail" src="../images/1.png"></image>
-    <rich-text class="thumbnail" nodes="{{nodes}}">
-      产品2
-    </rich-text>
-    单价：{{priceLst[1]}}
-    <view>
-      <rich-text id="1" catchtap="countMinus"> - </rich-text>
-      <rich-text id="1" catchtap="countAdd"> + </rich-text>
-      {{countLst[1]}}
-    </view>
-  </view>
-  <view class="row" id="2" bindtap="tap">
-    <image class="thumbnail" src="../images/2.png"></image>
-    <rich-text class="thumbnail" nodes="{{nodes}}">
-      产品3
-    </rich-text>
-    单价：{{priceLst[2]}}
-    <view>
-      <rich-text id="2" catchtap="countMinus"> - </rich-text>
-      <rich-text id="2" catchtap="countAdd"> + </rich-text>
-      {{countLst[2]}}
-    </view>
-  </view>
-  <view class="row" id="3" bindtap="tap">
-    <image class="thumbnail" src="../images/3.png"></image>
-    <rich-text class="thumbnail" nodes="{{nodes}}">
-      产品4
-    </rich-text>
-    单价：{{priceLst[3]}}
-    <view>
-      <rich-text id="3" catchtap="countMinus"> - </rich-text>
-      <rich-text id="3" catchtap="countAdd"> + </rich-text>
-      {{countLst[3]}}
-    </view>
-  </view>
-  <view class="row" id="4" bindtap="tap">
-    <image class="thumbnail" src="../images/4.png"></image>
-    <rich-text class="thumbnail" nodes="{{nodes}}">
-      产品5
-    </rich-text>
-    单价：{{priceLst[4]}}
-    <view>
-      <rich-text id="4" catchtap="countMinus"> - </rich-text>
-      <rich-text id="4" catchtap="countAdd"> + </rich-text>
-      {{countLst[4]}}
-    </view>
-    
   </view>
 
   <view class="container carts-list">
-    <view wx:for="{{carts}}" class="carts-item" data-title="{{item.title}}" data-url="{{item.url}}" bindtap="bindViewTap">
+    <view wx:for="{{carts}}" wx:key="cid" class="carts-item" data-title="{{item.title}}" data-url="{{item.url}}" bindtap="bindViewTap">
     <view>
      <image class="carts-image" src="{{item.image}}" mode="aspectFill"/>
     </view>
