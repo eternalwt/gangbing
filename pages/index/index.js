@@ -90,6 +90,18 @@ Page({
       countLst: app.globalData.count
       //TODO 应该使用for循环更新数据
     })
+  },
+
+  calling: function () {
+    wx.makePhoneCall({
+      phoneNumber: '15671613169', //此号码并非真实电话号码，仅用于测试
+      success: function () {
+        console.log("拨打电话成功！")
+      },
+      fail: function () {
+        console.log("拨打电话失败！")
+      }
+    })
   }
 
 })

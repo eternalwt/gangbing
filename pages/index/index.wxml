@@ -42,6 +42,7 @@
 </view>
 
 <view>
+<button type="default" bindtap="calling">联系卖家</button>
 总金额{{total}}
 <text bindtap="goCharge">立即购买</text>
 </view>
