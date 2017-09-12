@@ -6,5 +6,5 @@
   留言*<input placeholder="{{message}}" />
 <br /><br />
   总金额 {{total}}
-    
+    <button type="primary" bindtap="pay">付款</button>
   </scroll-view>

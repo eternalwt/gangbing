@@ -24,5 +24,24 @@ Page({
     //   phone:,
     //   message:
     // })
+  },
+
+  pay: function(){
+    wx.requestPayment(
+      {
+        'timeStamp': '',
+        'nonceStr': '',
+        'package': '',
+        'signType': 'MD5',
+        'paySign': '',
+        'success': function (res) {
+          console.log("pay succeeded!");
+         },
+        'fail': function (res) { 
+          console.log("pay failed!");
+        },
+        'complete': function (res) { }
+      }) 
+;
   }
 })
