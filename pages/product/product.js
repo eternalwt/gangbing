@@ -17,24 +17,27 @@ Page({
     })
   },
   countMinus: function() {
-    if (app.globalData.count[this.data.productId] > 0)
+    var id = this.data.productId;
+    if (app.globalData.count[id] > 0)
     {
-      app.globalData.count[this.data.productId]--;
-      app.globalData.totalPrice -= app.globalData.price[this.data.productId];
+      app.globalData.count[id]--;
+      app.globalData.totalPrice -= app.globalData.price[id];
 
       var that = this
       that.setData({
-        productCount: app.globalData.count[this.data.productId]
+        productCount: app.globalData.count[id]
       })
     }
   },
   countAdd: function () {
-    app.globalData.count[this.data.productId]++;
-    app.globalData.totalPrice += app.globalData.price[this.data.productId];
+    var id = this.data.productId;
+
+    app.globalData.count[id]++;
+    app.globalData.totalPrice += app.globalData.price[id];
 
     var that = this
     that.setData({
-      productCount: app.globalData.count[this.data.productId]
+      productCount: app.globalData.count[id]
     })
   },
 

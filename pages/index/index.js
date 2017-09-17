@@ -10,9 +10,7 @@ Page({
       { cid: 3, name: "产品4", image: '../images/3.png', price: app.globalData.price[3], count: app.globalData.count[3] },
       { cid: 4, name: "产品5", image: '../images/4.png', price: app.globalData.price[4], count: app.globalData.count[4] },
     ],
-    // name: ["产品1", "产品2", "产品3", "产品4", "产品5"],
-    //priceLst: app.globalData.price,
-    //countLst: app.globalData.count,
+
     total: 0,
 
     carts: [
@@ -40,23 +38,23 @@ Page({
     var id = event.currentTarget.id;
     if (app.globalData.count[id] > 0) {
       app.globalData.count[id]--;
+      this.data.products[id].count--;
       
       var that = this
       that.setData({
-        countLst : app.globalData.count
+        products: this.data.products
       })
-      console.log(that.countLst);
     }
   },
 
   countAdd: function (event) {
     var id = event.currentTarget.id;
-    console.log(id);
     app.globalData.count[id]++;
+    this.data.products[id].count++;
 
     var that = this
     that.setData({
-      'products[id].count' : app.globalData.count[id]
+      products: this.data.products
     })
   },
 
@@ -67,39 +65,31 @@ Page({
   },
 
   onLoad: function () {
-    console.log('onLoad')
     var that = this
-    //调用应用实例的方法获取全局数据
-    
     that.setData({
-      //priceLst: app.globalData.price,
-      //countLst: app.globalData.count
-    })
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-      })
     })
   },
 
   onShow: function () {
-    console.log("showed!");
     var that = this
+
+    for (var i = 0; i < app.globalData.count.length; i++) {
+      this.data.products[i].count = app.globalData.count[i];
+    }
+
     that.setData({
-      total: app.globalData.totalPrice,
-      countLst: app.globalData.count
-      //TODO 应该使用for循环更新数据
+      products: this.data.products
     })
   },
 
   calling: function () {
     wx.makePhoneCall({
-      phoneNumber: '15671613169', //此号码并非真实电话号码，仅用于测试
+      phoneNumber: '17707149611', //此号码并非真实电话号码，仅用于测试
       success: function () {
-        console.log("拨打电话成功！")
+        //add stat log
       },
       fail: function () {
-        console.log("拨打电话失败！")
+        //add app log
       }
     })
   }

@@ -2,8 +2,6 @@
 <view class="container">
   <scroll-view bindtap="bindViewTap" class="userinfo">
     <image class="product" src="images/gangbing1.jpg"></image>
-    <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
   </scroll-view>
 
   <view wx:for="{{products}}" wx:key="cid" class="row" id="{{item.cid}}" bindtap="tap">
